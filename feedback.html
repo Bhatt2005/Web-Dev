@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="feedback.css" />
+    <title>Feedback</title>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="feedback.html" class="active">Feedback</a>
+    </nav>
+
+    <h2>Feedback Form</h2>
+
+    <form action="#" method="post">
+      <p class="section-title">Basic Information</p>
+
+      <div class="field">
+        <label for="fullName">Full Name</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="Enter your full name"
+          required
+          minlength="3"
+          maxlength="80"
+        />
+      </div>
+
+      <div class="field">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+
+      <p class="section-title">Rating</p>
+
+      <div class="options">
+        <label
+          ><input type="radio" name="rating" value="very-satisfied" required />
+          Very Satisfied</label
+        >
+        <label
+          ><input type="radio" name="rating" value="satisfied" />
+          Satisfied</label
+        >
+        <label
+          ><input type="radio" name="rating" value="neutral" /> Neutral</label
+        >
+        <label
+          ><input type="radio" name="rating" value="unsatisfied" />
+          Unsatisfied</label
+        >
+      </div>
+
+      <p class="section-title">Interests</p>
+
+      <div class="options">
+        <label
+          ><input type="radio" name="interests" value="web" /> Web
+          Development</label
+        >
+        <label
+          ><input type="radio" name="interests" value="mobile" /> Mobile
+          Development</label
+        >
+        <label
+          ><input type="radio" name="interests" value="ai" /> AI & Machine
+          Learning</label
+        >
+      </div>
+
+      <p class="section-title">Country</p>
+
+      <div class="field">
+        <label for="country">Select your country</label>
+        <select id="country" name="country" required>
+          <option value="" disabled selected>Select your country</option>
+          <option value="np">Nepal</option>
+          <option value="in">India</option>
+          <option value="us">United States</option>
+          <option value="uk">United Kingdom</option>
+        </select>
+      </div>
+
+      <p class="section-title">Message</p>
+
+      <div class="field">
+        <label for="message">Write your feedback here</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Write your feedback here"
+          required
+          minlength="20"
+          maxlength="1000"
+        ></textarea>
+      </div>
+
+      <div class="submit-row">
+        <input type="submit" value="Submit" />
+        <a href="index.html" class="back">← Back to Home</a>
+      </div>
+    </form>
+  </body>
+</html>
