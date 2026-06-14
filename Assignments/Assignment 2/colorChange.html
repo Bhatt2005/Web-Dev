@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Color Changer</title>
+  <style>
+    #colorBox {
+      width: 300px;
+      height: 200px;
+      background-color: #ffffff;
+      border: 2px solid #ccc;
+      transition: background-color 0.4s ease;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="colorBox"></div>
+  <input type="color" id="colorPicker">
+  <button id="resetBtn">Reset</button>
+
+  <script>
+    const colorBox = document.getElementById("colorBox");
+    const colorPicker = document.getElementById("colorPicker");
+    const resetBtn = document.getElementById("resetBtn");
+
+    const defaultColor = "#ffffff";
+
+    colorPicker.addEventListener("input", function() {
+      colorBox.style.backgroundColor = colorPicker.value;
+    });
+
+    resetBtn.addEventListener("click", function() {
+      colorBox.style.backgroundColor = defaultColor;
+      colorPicker.value = defaultColor;
+    });
+  </script>
+
+</body>
+</html>
